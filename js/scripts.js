@@ -40,13 +40,12 @@ function encrypt(sentence) {
   var tempArray2 = [];
 
 for (var j = 0; j < columns; j++){
-  for (var i = 0; i < array.length; i += columns) {
-    tempArray.push(array[i + j]);
+  for (var i = j; i < array.length; i += columns) {
+    tempArray.push(array[i]);
   };
-  tempArray2.push(tempArray);
 }
-  console.log(tempArray2)
-  return tempArray2[0];
+  console.log(tempArray)
+  return tempArray;
 };
 
 function cleanUp(sentence){
